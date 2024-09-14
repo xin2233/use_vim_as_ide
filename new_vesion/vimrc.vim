@@ -153,5 +153,8 @@ autocmd BufWritePost *.c,*.h,*.cpp,*.hpp silent! execute '!ctags -a -f ./tags -e
 
 """" fzf 配置： 就可以使用 Ctrl + p 来快速打开文件了。
 nnoremap <C-p> :Files<CR>
+"""" fzf 配置： 实现查找工程中特定字符的工具，这样ctrl + f 就可以进行全局的字符串搜索了
+" ubuntu 需要安装 : sudo apt-get install ripgrep
+nnoremap <C-f> :Rg<CR>  
 
 """"""" 插件配置 end """"""""""""
