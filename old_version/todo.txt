@@ -1,0 +1,24 @@
+todo 想做 vscode 主题风格
+
+https://github.com/tomasiser/vim-code-dark
+
+使用方法：
+
+Plug 'tomasiser/vim-code-dark'
+
+使能
+colorscheme codedark
+
+3) Terminal support
+3.1) If you use gVim / a modern terminal
+
+👍 The colorscheme will work out of the box. No need to setup anything else!
+3.2) If the colors seem to be wrong
+
+If your terminal supports 256 colors (see this script if you want to test your terminal), you may need to set t_Co to 256 and possibly also reset the t_ut value in your .vimrc before setting the colorscheme:
+
+set t_Co=256
+set t_ut=
+colorscheme codedark
+
+(Additionally, if you don't want to or cannot use t_Co, you can let g:codedark_term256=1.)

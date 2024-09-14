@@ -1,0 +1,8 @@
+VIM默认情况下，函数名是不会高亮的，将下面这段代码添加到/usr/share/vim/vim73/syntax/c.vim文件的末尾即可：
+
+"highlight Functions
+syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
+syn match cFunctions "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
+hi cFunctions gui=NONE cterm=bold  ctermfg=blue
+
+ctermfg 表示函数名的颜色，可以自行更换。
