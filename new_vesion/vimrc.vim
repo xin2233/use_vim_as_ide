@@ -18,7 +18,10 @@ set wildmenu
 
 " 配色方案
 set background=dark
-colorscheme solarized
+set t_Co=256
+set t_ut=
+colorscheme codedark
+"colorscheme solarized
 "colorscheme molokai
 "colorscheme phd
 
