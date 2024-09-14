@@ -141,6 +141,9 @@ autocmd VimEnter * NERDTree | wincmd p
 " 如果退出vim后只剩Tree的Tag的话，则自动退出Tree的Tag
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+" 当打开文件时，如果 NERDTree 是唯一的窗口，则关闭它
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 """""""""""""" NERDTreeToggle end """"""""""""""""""""
 
 
