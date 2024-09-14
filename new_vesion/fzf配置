@@ -1,0 +1,29 @@
+1. fzf
+Fuzzy finder 是一款使用 GO 语言编写的交互式的 Unix 命令行工具。可以用来查找任何 列表 内容，文件、Git 分支、进程等。所有的命令行工具可以生成列表输出的都可以再通过管道 pipe 到 fzf 上进行搜索和查找
+
+2. VIM fzf 插件
+如果你使用 vim，那么官方提供的插件会让你的 vim 使用更加流畅
+安装插件
+
+如果你本地安装过 fzf 命令行工具了，只需要在 .vimrc 里面添加下面两个插件配置即可
+    Plug '/usr/local/opt/fzf'
+    Plug 'junegunn/fzf.vim
+    
+命令模式下敲 Files 即可选择当前目录下所有文件，Buffers 可以过滤当前所有 vim buffer 内容
+再配置几个常用快捷键就可以直接取代 CtrlP 插件了
+    Ctrl + p 查看文件列表
+    Ctrl + e 查看当前 Buffer，两次 Ctrl + e 快速切换上次打开的 Buffer
+    
+在vimrc 中增肌：
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
+let g:fzf_action = { 'ctrl-e': 'edit' }
+
+
+""""就可以使用 Ctrl + p 来快速打开文件了。
+nnoremap <C-p> :Files<CR>
+
+"""""实现查找工程中特定字符的工具，这样ctrl + f 就可以进行全局的字符串搜索了
+"ubuntu: sudo apt-get install ripgrep
+nnoremap <C-f> :Rg<CR>  
+    
